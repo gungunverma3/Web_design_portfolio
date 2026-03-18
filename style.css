@@ -4,32 +4,19 @@
     box-sizing:border-box;
 }
 
-/* GLOBAL CONTAINER (IMPORTANT FIX) */
-section,
-header{
-    width:100%;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
-}
-
-/* Body background */
+/* BODY */
 body{
     background:
     radial-gradient(circle at 20% 20%, rgba(255,0,79,0.15), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(59,130,246,0.15), transparent 40%),
     linear-gradient(135deg,#0a0a0a,#141414,#0a0a0a);
-    
     color:white;
-    min-height:100vh;
 }
 
 /* ================= HEADER ================= */
 
 header{
+    width:100%;
     position:sticky;
     top:0;
     z-index:1000;
@@ -37,7 +24,6 @@ header{
     background: rgba(10,10,10,0.6);
 }
 
-/* Navbar */
 nav{
     max-width:1200px;
     margin:auto;
@@ -47,15 +33,14 @@ nav{
     align-items:center;
 }
 
-/* Logo */
+/* LOGO */
 .logo img{
     height:60px;
 }
 
-/* Nav menu */
+/* NAV */
 nav ul{
     display:flex;
-    align-items:center;
     gap:25px;
     list-style:none;
 }
@@ -64,13 +49,10 @@ nav ul li a{
     text-decoration:none;
     color:#e5e5e5;
     font-size:15px;
-    font-weight:500;
     position:relative;
     padding:5px 0;
-    transition:0.3s;
 }
 
-/* underline */
 nav ul li a::after{
     content:"";
     position:absolute;
@@ -146,7 +128,7 @@ nav ul li a:hover::after{
     padding:100px 20px;
 }
 
-/* ================= PROJECT GRID FIX ================= */
+/* ================= PROJECT GRID ================= */
 
 .project-container{
     display:grid;
@@ -170,7 +152,7 @@ nav ul li a:hover::after{
     transform:scale(1.1);
 }
 
-/* ================= MOBILE ================= */
+/* ================= TABLET ================= */
 
 @media screen and (max-width:1024px){
 
@@ -188,26 +170,33 @@ nav ul li a:hover::after{
 
 @media screen and (max-width:768px){
 
+    /* HEADER */
     nav{
         flex-direction:column;
         align-items:flex-start;
-        gap:10px;
+        gap:12px;
+    }
+
+    .logo img{
+        height:48px;
     }
 
     nav ul{
         width:100%;
         flex-wrap:wrap;
-        gap:10px;
+        gap:8px;
     }
 
     nav ul li{
-        flex:1 1 auto;
+        flex:1 1 45%;
     }
 
     nav ul li a{
+        display:block;
         font-size:14px;
     }
 
+    /* HERO */
     .hero{
         flex-direction:column;
         text-align:center;
@@ -218,14 +207,34 @@ nav ul li a:hover::after{
         height:220px;
     }
 
+    /* PROJECT GRID */
     .project-container{
         grid-template-columns:1fr;
+    }
+
+    /* SECTION SPACING */
+    #projects,
+    #myWork,
+    #experience,
+    #contactMe,
+    .skills,
+    .about-timeline,
+    #eduSection{
+        padding:70px 16px;
     }
 }
 
 /* ================= SMALL MOBILE ================= */
 
 @media screen and (max-width:480px){
+
+    nav ul li{
+        flex:1 1 100%;
+    }
+
+    nav ul li a{
+        font-size:13px;
+    }
 
     .hero-text h1{
         font-size:32px;
@@ -237,9 +246,5 @@ nav ul li a:hover::after{
 
     .hero-text p{
         font-size:14px;
-    }
-
-    nav ul li a{
-        font-size:13px;
     }
 }
