@@ -667,6 +667,184 @@ nav ul li a:hover::after{
     color:#3b82f6;
     letter-spacing:1px;
 }
+/*media  */
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media screen and (max-width:1024px){
+
+    header{
+        padding:20px 40px;
+    }
+
+    .hero{
+        padding:0 40px;
+    }
+
+    #projects,
+    #myWork,
+    #experience,
+    #contactMe,
+    .skills,
+    .about-timeline,
+    #eduSection{
+        padding:80px 40px;
+    }
+
+    .project-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* ================= MOBILE (TABLET) ================= */
+
+@media screen and (max-width:768px){
+
+    /* NAVBAR */
+    nav ul{
+        gap:15px;
+        font-size:14px;
+    }
+
+    .logo img{
+        height:55px;
+    }
+
+    /* HERO */
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    .hero-text h2{
+        font-size:20px;
+    }
+
+    .hero-text p{
+        font-size:18px;
+    }
+
+    .hero-img img{
+        width:220px;
+        height:220px;
+    }
+
+    /* TIMELINE */
+    .timeline-container::before{
+        left:15px;
+    }
+
+    .timeline-item{
+        padding-left:60px;
+    }
+
+    /* SKILLS */
+    .skills-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .skill-card{
+        width:90%;
+    }
+
+    /* PROJECTS */
+    .project-container{
+        grid-template-columns: repeat(2,1fr);
+        gap:20px;
+    }
+
+    /* WORK LIST */
+    .workRow{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    /* EXPERIENCE */
+    .exp-row{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .exp-date{
+        font-size:16px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media screen and (max-width:480px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .hero{
+        padding:0 20px;
+    }
+
+    #projects,
+    #myWork,
+    #experience,
+    #contactMe,
+    .skills,
+    .about-timeline,
+    #eduSection{
+        padding:60px 20px;
+    }
+
+    /* NAV */
+    nav ul{
+        gap:10px;
+        font-size:12px;
+    }
+
+    /* HERO TEXT */
+    .hero-text h1{
+        font-size:32px;
+    }
+
+    .hero-text h2{
+        font-size:18px;
+    }
+
+    .hero-text p{
+        font-size:16px;
+    }
+
+    .hero-img img{
+        width:180px;
+        height:180px;
+    }
+
+    /* PROJECTS */
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+    /* TITLES */
+    .project-title,
+    .skills h2,
+    .contactTitle,
+    .workHeading,
+    .exp-title,
+    #eduSection .eduTitle,
+    .about-timeline h2{
+        font-size:30px;
+    }
+
+    /* CONTACT */
+    .contactValue{
+        font-size:16px;
+    }
+}
 
 .contactValue{
     font-size:20px;
